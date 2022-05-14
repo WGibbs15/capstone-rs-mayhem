@@ -15,8 +15,8 @@ fuzz_target!(|data: &[u8]| {
         let detail: InsnDetail = cs.insn_detail(&i).unwrap();
         let arch_detail: ArchDetail = detail.arch_detail();
         arch_detail.operands().iter().for_each(drop);
-        detail.regs_read().for_each(drop);
-        detail.regs_write().for_each(drop);
-        detail.groups().for_each(drop);
+        detail.regs_read().iter().for_each(drop);
+        detail.regs_write().iter().for_each(drop);
+        detail.groups().iter().for_each(drop);
     }
 });

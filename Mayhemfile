@@ -1,0 +1,11 @@
+project: wgibbs15/capstone-rs-mayhem
+
+# Target name (should be unique within the project)
+target: capstone-rs-fuzz
+
+# List of commands used to test the target
+cmds:
+
+    # Command used to start the target, "@@" is the input file
+    # (when "@@" is omitted Mayhem defaults to stdin inputs)
+    - cmd: /fuzz_target_disasm_x86_64
