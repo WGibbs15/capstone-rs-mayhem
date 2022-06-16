@@ -1,4 +1,4 @@
-project: wgibbs15/capstone-rs-mayhem
+project: capstone-rs-mayhem
 
 # Target name (should be unique within the project)
 target: capstone-rs-fuzz
